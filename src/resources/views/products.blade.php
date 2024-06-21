@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/products.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 @endsection
 
 @section('content')
@@ -31,21 +32,24 @@
         </form>
         <hr class="under__border"></hr>
     </div>
-    
-    <div class="item__contents">
-        @foreach ($products as $product)
-            <div class="item__card">
-                <a href="/products/{{$product->id}}" class="card__link">
-                    <img src="{{ url('img/'.$product->image) }}" alt="img" class="card__image">
-                    <div class="card__bottom">
-                        <p>{{$product->name}}</p>
-                        <p>￥{{$product->price}}</p>
-                    </div>
-                </a>
-            </div>
-        @endforeach    
+    <div class="info__contets">
+        <div class="item__contents">
+            @foreach ($products as $product)
+                <div class="item__card">
+                    <a href="/products/{{$product->id}}" class="card__link">
+                        <img src="{{ url('img/'.$product->image) }}" alt="img" class="card__image">
+                        <div class="card__bottom">
+                            <p>{{$product->name}}</p>
+                            <p>￥{{$product->price}}</p>
+                        </div>
+                    </a>
+                </div>
+            @endforeach    
+        </div>
+        <div class="pagination__contents">
+            {{ $products->links('pagination::default') }}
+        </div>
     </div>
-    {{ $products->links() }}
 </div>
 
 @endsection

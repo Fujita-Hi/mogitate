@@ -121,3 +121,9 @@ main {
     padding: 0 15px;
     background-color: transparent;
 }
+
+.pagination__contents {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

@@ -12,7 +12,7 @@ use App\Http\Requests\UpdateRequest;
 class MogitateController extends Controller
 {
     public function products(){
-        $products = Product::simplePaginate(6);
+        $products = Product::paginate(6);
         $keyword = null;
         $sort=null;
         return view('products', compact('products', 'keyword', 'sort'));
@@ -25,7 +25,7 @@ class MogitateController extends Controller
             $products = Product::where('name', 'LIKE', '%' . $keyword . '%')->paginate(6);
         }
         else{
-            $products = Product::where('name', 'LIKE', '%' . $keyword . '%')->orderBy('price', $sort)->simplePaginate(6);
+            $products = Product::where('name', 'LIKE', '%' . $keyword . '%')->orderBy('price', $sort)->paginate(6);
         }
         
         return view('products', compact('products', 'keyword', 'sort'));
