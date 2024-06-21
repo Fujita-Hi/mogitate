@@ -1,0 +1,135 @@
+main {
+    margin: 50px 25%;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.grid__contents {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    gap: 30px;
+}
+
+.product__tag {
+    margin-bottom: 10px;
+    color: #4B4B4B;
+}
+
+.product__image {
+    width: 100%;
+    height: auto;
+}
+
+.product__text {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: white;
+    border: 1px solid #E0DFDE;
+}
+
+.checkbox__label {
+    margin-right: 20px;
+}
+
+.checkbox__input {
+    appearance: none;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.checkbox__input::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: solid 1px #4B4B4B;
+}
+
+
+.checkbox__input:checked::before {
+    background-color: #4B4B4B
+}
+
+.checkbox__input::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: 4px;
+    height: 10px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.checkbox__input:checked::after {
+    opacity: 1;
+}
+
+.product__textarea {
+    width: 100%;
+    height: 150px;
+    color: #4B4B4B;
+    margin-bottom: 20px;
+    vertical-align: top;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: white;
+    border: 1px solid #E0DFDE;
+}
+
+.product__text::placeholder,
+.product__textarea::placeholder {
+    color: #E0DFDE;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button__back--link {
+    text-decoration: none;
+}
+
+.button__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4B4B4B;
+    font-weight: 600;
+    width: 200px;
+    height: 50px;
+    background-color: #E0DFDE;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button__update {
+    color: #4B4B4B;
+    font-weight: 600;
+    width: 200px;
+    height: 50px;
+    background-color: #F5C800;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
