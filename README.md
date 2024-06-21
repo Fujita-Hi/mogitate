@@ -34,7 +34,7 @@ php artisan db:seed
 
 
 ## 使用技術(実行環境)
-* Laravel 10.x
+* Laravel 10.48.13
 * PHP 8.2.12
 * MySQL 8.0.26
 
