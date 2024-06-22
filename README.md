@@ -1,7 +1,6 @@
 # mogitate
 
 ## 環境構築
-- Dockerのビルドからマイグレーション、シーディングまでを記述する
 ディレクトリに、mogitate.gitをクローン
 ```
 git clone git@github.com:Fujita-Hi/mogitate.git
