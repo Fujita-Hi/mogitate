@@ -5,18 +5,18 @@
 ```
 git clone git@github.com:Fujita-Hi/mogitate.git
 ```
+
 dockerで環境を構築
 ```
 docker-compose up -d --build
 ```
+
 パッケージをインストール
 ```
 docker-compose exec php bash
 ```
-
 ```
 composer install
-php artisan key:generate
 exit
 ```
 
@@ -25,13 +25,15 @@ exit
 cp src/.env.example src/.env
 ```
 
-PHPコンテナ上でテーブルとダミーデータの作成
+PHPコンテナ上でアプリケーションキーの設定およびテーブルとダミーデータの作成
 ```
 docker-compose exec php bash
 ```
 ```
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
+exit
 ```
 
 
