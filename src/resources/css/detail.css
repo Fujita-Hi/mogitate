@@ -1,5 +1,5 @@
 main {
-    margin: 50px 25%;
+    margin: 50px 15%;
 }
 
 .breadcrumb a {
@@ -19,8 +19,8 @@ main {
 }
 
 .product__image {
-    width: 100%;
-    height: auto;
+    width: 315px;
+    height: 225px;
 }
 
 .product__file {
@@ -37,16 +37,16 @@ main {
     color: #4B4B4B;
     cursor: pointer;
     margin: 1em 0;
-    padding: .7em 1em;
+    padding: .5em 1em;
     line-height: 1;
     background: #E0DFDE;
-    font-size: 0.95em;
+    font-size: 0.8em;
     transition: 0.2s;
     border: 1px solid #4B4B4B;
 }
 
 .file__name {
-    display: none;
+    font-size: .7em;
     margin-left: 10px;
     color: #888888;
 }

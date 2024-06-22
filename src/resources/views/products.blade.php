@@ -20,7 +20,11 @@
 
             <p class="search__sort--text">価格順で表示</p>
             <div class="search__sort">
-                <select name="sort" id="" class="sort__select">
+                @if(!$sort)
+                    <select name="sort" class="sort__select" id="sortSelect">
+                @else
+                    <select name="sort" class="sort__select selected" id="sortSelect">
+                @endif
                     <option value="" class="sort__select--disabled" selected disabled>価格順に表示</option>
                     <option value="desc" {{ $sort == 'desc' ? 'selected' : '' }}>高い順に表示</option>
                     <option value="asc" {{ $sort == 'asc' ? 'selected' : '' }}>低い順に表示</option>
@@ -52,4 +56,5 @@
     </div>
 </div>
 
+<script src="{{ asset('js/sortSelect.js') }}"></script>
 @endsection

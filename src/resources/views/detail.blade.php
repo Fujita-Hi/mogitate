@@ -21,7 +21,7 @@
                 <label class="file__label">ファイルを選択
                     <input class="file__input" type="file" id="image" name="image">
                 </label>
-                <div class="file__name" id="fileName"></div>
+                <div class="file__name" id="fileName">{{$product->image}}</div>
             </div>
             @if($errors->has('image'))
                 @foreach($errors->get('image') as $message)
@@ -53,19 +53,19 @@
             <p class="product__tag">季節</p>
             <div class="product__checkbox">
                 <label class="checkbox__label">
-                    <input type="checkbox" class="checkbox__input" name="seasons[]" value="1" {{ $seasons['haru'] ? 'checked' : '' }}>
+                    <input name="seasons[]" type="checkbox" class="checkbox__input" value="1" {{in_array("1", old('seasons', $seasons))? ' checked' : '' }}>
                     春
                 </label>
                 <label class="checkbox__label">
-                    <input type="checkbox" class="checkbox__input" name="seasons[]" value="2" {{ $seasons['natsu'] ? 'checked' : '' }}>
+                    <input name="seasons[]" type="checkbox" class="checkbox__input" value="2" {{in_array("2", old('seasons', $seasons))? ' checked' : '' }}>
                     夏
                 </label>
                 <label class="checkbox__label">
-                    <input type="checkbox" class="checkbox__input" name="seasons[]" value="3" {{ $seasons['aki'] ? 'checked' : '' }}>
+                    <input name="seasons[]" type="checkbox" class="checkbox__input" value="3" {{in_array("3", old('seasons', $seasons))? ' checked' : '' }}>
                     秋
                 </label>
                 <label class="checkbox__label">
-                    <input type="checkbox" class="checkbox__input" name="seasons[]" value="4" {{ $seasons['fuyu'] ? 'checked' : '' }}>
+                    <input name="seasons[]" type="checkbox" class="checkbox__input" value="4" {{in_array("4", old('seasons', $seasons))? ' checked' : '' }}>
                     冬
                 </label>
                 @if($errors->has('seasons'))

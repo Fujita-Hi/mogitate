@@ -58,13 +58,7 @@ class MogitateController extends Controller
 
     public function detail($product_id){
         $product = Product::findOrFail($product_id);
-        $season_ids = $product->seasons->pluck('id')->toArray();
-        $seasons = [
-            'haru' => in_array(1, $season_ids),
-            'natsu' => in_array(2, $season_ids),
-            'aki' => in_array(3, $season_ids),
-            'fuyu' => in_array(4, $season_ids),
-        ];
+        $seasons = $product->seasons->pluck('id')->toArray();
         return view('detail', compact('product', 'seasons'));
     }
 
@@ -88,12 +82,4 @@ class MogitateController extends Controller
         
         return redirect()->route('products');
     }
-
-    public function delete($product_id){
-        $product = Product::findOrFail($product_id);
-        $product->delete();
-        
-        return redirect()->route('products');
-    }
-
 }

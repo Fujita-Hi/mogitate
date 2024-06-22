@@ -29,10 +29,10 @@ class UpdateRequest extends FormRequest
         }
         return [
             'name' => 'required',
-            'price' => ['required', 'numeric', 'between:0,10000'],
+            'price' => 'required|numeric|between:0,10000',
             'image' => $image_rule,
             'seasons' => 'required',
-            'description' => ['required', 'max:120'],
+            'description' => 'required|max:120',
         ];
     }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}" />
     <script src="https://kit.fontawesome.com/3e5c0e8e92.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Mogitate</title>
     @yield('css')
 </head>
 <body>

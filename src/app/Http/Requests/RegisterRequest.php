@@ -24,10 +24,10 @@ class RegisterRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'price' => ['required', 'numeric', 'between:0,10000'],
-            'image' => ['required', 'image', 'mimes:jpeg,png'],
+            'price' => 'required|numeric|between:0,10000',
+            'image' => 'required|image|mimes:jpeg,png',
             'seasons' => 'required',
-            'description' => ['required', 'max:120'],
+            'description' => 'required|max:120',
         ];
     }
 

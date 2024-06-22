@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<h1 class="main__title">商品一覧</h1>
+<h1 class="main__title">商品登録</h1>
 <div class="main__contents">
    <form action="/products/register" method="POST" enctype="multipart/form-data">
         @csrf
@@ -30,7 +30,7 @@
         <p class="register__tag">商品画像<span class="register__required">必須</span></p>
 
         <div id="imagePreview" style="display: none;">
-            <img id="selectedImage" src="" alt="Selected Image">
+            <img class="register__image" id="selectedImage" src="" alt="Selected Image">
         </div>
 
         <div class="register__file">
