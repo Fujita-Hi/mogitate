@@ -2,7 +2,7 @@
 
 ## 環境構築
 - Dockerのビルドからマイグレーション、シーディングまでを記述する
-ディレクトリに、20240509_fleamarcket.gitをクローン
+ディレクトリに、mogitate.gitをクローン
 ```
 git clone git@github.com:Fujita-Hi/mogitate.git
 ```
@@ -14,19 +14,22 @@ docker-compose up -d --build
 ```
 docker-compose exec php bash
 ```
-PHPコンテナ上で実行
+
 ```
 composer install
 php artisan key:generate
+exit
 ```
 
-ターミナル上でsrc配下に移動し.envを.env.exampleを下に作成し環境変数を変更  
+.envを.env.exampleを下に作成し環境変数を変更  
 ```
-cd src/
-cp .env.example .env
+cp src/.env.example src/.env
 ```
 
 PHPコンテナ上でテーブルとダミーデータの作成
+```
+docker-compose exec php bash
+```
 ```
 php artisan migrate
 php artisan db:seed
